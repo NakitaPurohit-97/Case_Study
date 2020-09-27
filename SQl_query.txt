@@ -1,0 +1,15 @@
+create database db_book;
+use db_book;
+drop database db;
+create table Book
+(
+ISBN_number integer auto_increment , 
+Book_name varchar(50) not null,
+Author_name varchar(50),
+Edition int,
+check(Edition>0),
+primary key(ISBN_number));
+
+insert into Book(Book_name,Author_name,Edition)values('Pride and Prejudice','Jane Austen',1);
+select * from Book;
+DELETE FROM Book WHERE ISBN_number=7;
